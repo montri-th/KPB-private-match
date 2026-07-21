@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap");
 
-/* Thai-only subsets keep Latin typography in its original KPB role. */
+/* Thai-only subsets keep Latin typography in its original KPB role.
+   Optical mapping: Cormorant 400-500 pairs with IBM Plex Sans Thai 300;
+   Cormorant 600 pairs with IBM Plex Sans Thai 400. */
 @font-face {
   font-family: "IBM Plex Sans Thai KPB";
   font-style: normal;
@@ -14,7 +16,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url("assets/fonts/ibm-plex-sans-thai-thai-400-normal.woff2") format("woff2");
+  src: url("assets/fonts/ibm-plex-sans-thai-thai-300-normal.woff2") format("woff2");
   unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
 }
 @font-face {
@@ -22,7 +24,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: url("assets/fonts/ibm-plex-sans-thai-thai-500-normal.woff2") format("woff2");
+  src: url("assets/fonts/ibm-plex-sans-thai-thai-300-normal.woff2") format("woff2");
   unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
 }
 @font-face {
@@ -30,7 +32,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 600;
-  src: url("assets/fonts/ibm-plex-sans-thai-thai-600-normal.woff2") format("woff2");
+  src: url("assets/fonts/ibm-plex-sans-thai-thai-400-normal.woff2") format("woff2");
   unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
 }
 @font-face {
