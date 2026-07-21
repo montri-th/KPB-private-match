@@ -1,12 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap");
 
-/* Thai-only subset: every Thai glyph uses Noto Serif Thai. */
+/* Thai-only subsets keep Latin typography in its original KPB role. */
 @font-face {
-  font-family: "Noto Serif Thai KPB";
+  font-family: "IBM Plex Sans Thai KPB";
   font-style: normal;
   font-display: swap;
-  font-weight: 100 900;
-  src: url("assets/fonts/noto-serif-thai-thai-wght-normal.woff2") format("woff2");
+  font-weight: 300;
+  src: url("assets/fonts/ibm-plex-sans-thai-thai-300-normal.woff2") format("woff2");
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "IBM Plex Sans Thai KPB";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("assets/fonts/ibm-plex-sans-thai-thai-400-normal.woff2") format("woff2");
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "IBM Plex Sans Thai KPB";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("assets/fonts/ibm-plex-sans-thai-thai-500-normal.woff2") format("woff2");
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "IBM Plex Sans Thai KPB";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("assets/fonts/ibm-plex-sans-thai-thai-600-normal.woff2") format("woff2");
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Sarabun Thai KPB";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("assets/fonts/sarabun-thai-300-normal.woff2") format("woff2");
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Sarabun Thai KPB";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("assets/fonts/sarabun-thai-400-normal.woff2") format("woff2");
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Sarabun Thai KPB";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("assets/fonts/sarabun-thai-500-normal.woff2") format("woff2");
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Sarabun Thai KPB";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("assets/fonts/sarabun-thai-600-normal.woff2") format("woff2");
   unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
 }
 
@@ -35,10 +91,9 @@
   --page-wide: min(1450px, calc(100vw - 40px));
   --header-height: 76px;
   --ease: cubic-bezier(.22,.72,.24,1);
-  --font-thai: "Noto Serif Thai KPB";
-  --font-sans: var(--font-thai), "Helvetica Neue", "Arial", sans-serif;
-  --font-serif: "Cormorant Garamond", var(--font-thai), "Baskerville", "Georgia", "Times New Roman", serif;
-  --font-mono: var(--font-thai), "Helvetica Neue", "Arial", sans-serif;
+  --font-sans: "Sarabun Thai KPB", "Helvetica Neue", "Arial", sans-serif;
+  --font-serif: "Cormorant Garamond", "IBM Plex Sans Thai KPB", "Baskerville", "Georgia", "Times New Roman", serif;
+  --font-mono: var(--font-sans);
 }
 
 * { box-sizing: border-box; }
@@ -727,6 +782,10 @@ dialog::backdrop { background:rgba(3,21,34,.78); backdrop-filter:blur(5px); }
 .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.is-visible { opacity:1; transform:none; }
 
+/* Thai copy is set slightly open; English keeps the captured KPB tracking. */
+html:lang(th) body { letter-spacing:.012em; }
+html:lang(th) :is(h1, h2, h3, h4, h5, h6) { letter-spacing:.01em; }
+
 @media (max-width: 1180px) {
   :root { --page:min(1000px,calc(100vw - 44px)); }
   .site-header__inner { grid-template-columns:230px 1fr auto; }
@@ -794,6 +853,8 @@ dialog::backdrop { background:rgba(3,21,34,.78); backdrop-filter:blur(5px); }
 
 @media (max-width: 660px) {
   :root { --header-height:66px; --page:calc(100vw - 24px); --page-wide:calc(100vw - 12px); }
+  html:lang(th) body { letter-spacing:.01em; }
+  html:lang(th) :is(h1, h2, h3, h4, h5, h6) { letter-spacing:.005em; }
   .prototype-ribbon { font-size:8px; padding-inline:10px; }
   .site-header__inner { width:calc(100vw - 24px); }
   .brand-lockup { width:200px; }
