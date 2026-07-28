@@ -1,0 +1,72 @@
+name: Publish KPB design system and reusable skills v1.0
+
+on:
+  push:
+    paths:
+      - .github/workflows/publish-kpb-design-system-skills-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Decode and write artifacts
+        run: |
+          python - <<'PY'
+          import base64
+          import glob
+          import json
+          import pathlib
+          import zlib
+
+          parts = sorted(glob.glob('.release-payload/kpb-design-system-skills-v1.part*'))
+          if not parts:
+              raise SystemExit('No release payload parts found')
+
+          packed = ''.join(pathlib.Path(path).read_text() for path in parts)
+          payload = json.loads(zlib.decompress(base64.b64decode(packed)).decode('utf-8'))
+
+          for relative_path, encoded_content in payload.items():
+              output_path = pathlib.Path(relative_path)
+              output_path.parent.mkdir(parents=True, exist_ok=True)
+              output_path.write_bytes(base64.b64decode(encoded_content))
+
+          print(f'Wrote {len(payload)} files from {len(parts)} payload parts')
+          PY
+
+      - name: Validate package
+        run: |
+          test -f docs/kpb_private_banking_experience_design_system_v1_0.md
+          test -f skills/README.md
+          test -f skills/kpb-private-property-domain/SKILL.md
+          test -f skills/client-brand-product-adaptation/SKILL.md
+          test -f skills/high-trust-service-value-case/SKILL.md
+          test -f skills/executive-interactive-demo/SKILL.md
+          test -f skills/github-pages-release-operator/SKILL.md
+          test -f skill-manifest.json
+          python -m json.tool skill-manifest.json >/dev/null
+          grep -q 'KPB Private Banking Experience Design System' docs/kpb_private_banking_experience_design_system_v1_0.md
+          grep -q 'shared Landometer layer' docs/kpb_private_banking_experience_design_system_v1_0.md
+          grep -q 'kpb-private-property-domain' skills/README.md
+          if find . -type f -name '*.md.txt' | grep -q .; then
+            echo 'Found invalid .md.txt file' >&2
+            exit 1
+          fi
+
+      - name: Commit source skills and design system
+        run: |
+          rm -f .release-payload/kpb-design-system-skills-v1.part*
+          rmdir .release-payload 2>/dev/null || true
+          rm -f .github/workflows/publish-kpb-design-system-skills-v1.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add KPB design system and reusable skills v1.0"
+          git push origin main
