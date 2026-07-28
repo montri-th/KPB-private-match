@@ -1,0 +1,218 @@
+--- a/index.html
++++ b/index.html
+@@ -7,12 +7,13 @@
+   <meta name="referrer" content="strict-origin-when-cross-origin">
+   <meta name="theme-color" content="#0A3351">
+   <title>KBank Private Property Opportunities — Interactive Concept</title>
+-  <meta name="description" content="Interactive concept prototype for KBank Private Property Opportunities, powered by Landometer.">
++  <meta name="description" content="Interactive stakeholder prototype showing the client pain, joint value proposition and controlled private property opportunity service proposed for KBank Private Banking, powered by Landometer.">
+   <link rel="icon" type="image/png" href="assets/landometer-mark.png">
+   <link rel="preload" as="image" href="assets/property-yacht.jpg">
+   <link rel="preload" as="image" href="assets/property-tower.jpg">
+   <link rel="preload" as="image" href="assets/property-resort.jpg">
+   <link rel="stylesheet" href="styles.css">
++  <link rel="stylesheet" href="value-v0-2.css">
+ </head>
+ <body>
+   <div class="prototype-ribbon" role="note">
+@@ -148,6 +149,51 @@
+       </div>
+     </section>
+ 
++    <section class="pain-section section-cream" id="client-pain" aria-labelledby="pain-title">
++      <div class="page-shell">
++        <div class="section-intro section-intro--split reveal">
++          <div>
++            <span class="section-kicker">CLIENT TENSION WE MUST HANDLE WELL</span>
++            <h2 id="pain-title">value proposition ต้องเริ่มจากความกังวลจริงของลูกค้า KBank Private Banking</h2>
++          </div>
++          <p>ลูกค้าไม่ได้ต้องการ “ค้นหาที่ดิน” อย่างเดียว แต่กำลังพยายามตัดสินใจเรื่องเงินก้อนใหญ่ ชื่อเสียงของครอบครัว เวลา และความมั่นใจว่าจะไม่พลาดโอกาสที่เหมาะกว่า โดยไม่อยากให้ข้อมูลกระจายออกไปแบบเว็บประกาศหรือ broker blast</p>
++        </div>
++
++        <div class="pain-grid">
++          <article class="pain-card reveal">
++            <span class="pain-card__tag">EMOTIONAL PAIN 01</span>
++            <h3>ไม่อยากเสียหน้าและเสียเวลา กับตัวเลือกที่ “เหมือนใช่แต่ไม่ใช่”</h3>
++            <p>ลูกค้าระดับ private banking มักได้รับ deal flow จำนวนมากอยู่แล้ว แต่ข้อมูลมักกระจัดกระจาย เปรียบเทียบยาก และเต็มไปด้วยทรัพย์ที่ไม่ตรงโจทย์จริง</p>
++            <ul>
++              <li>ไม่อยากเริ่มจาก shortlist ยาว ๆ ที่ต้องคัดเอง</li>
++              <li>ไม่อยากถูกยัดเยียด listing เพียงเพราะมี supply ค้างอยู่</li>
++              <li>ต้องการความมั่นใจว่า “ตัวเลือกนี้มาถึงฉันด้วยเหตุผลที่ดีจริง”</li>
++            </ul>
++          </article>
++          <article class="pain-card reveal">
++            <span class="pain-card__tag">EMOTIONAL PAIN 02</span>
++            <h3>ต้องการความเป็นส่วนตัว แต่ก็ไม่อยากพลาดโอกาสนอกตลาด</h3>
++            <p>การมองหาทรัพย์เพื่อซื้อหรือลงทุนมักมีนัยต่อกลยุทธ์ครอบครัว ธุรกิจ หรือ succession planning ลูกค้าจึงไม่อยากให้ใครรู้เร็วเกินไปว่ากำลังหาอะไร</p>
++            <ul>
++              <li>ไม่ต้องการให้ชื่อครอบครัวหลุดไปในตลาด</li>
++              <li>ต้องการเห็นเฉพาะทรัพย์ที่มีสิทธิ์จะเปิดเผยให้ตนดูได้จริง</li>
++              <li>อยากคุยกับคนที่เข้าใจความละเอียดอ่อนเรื่องนี้</li>
++            </ul>
++          </article>
++          <article class="pain-card reveal">
++            <span class="pain-card__tag">EMOTIONAL PAIN 03</span>
++            <h3>การตัดสินใจไม่ได้อยู่ที่ราคาอย่างเดียว แต่อยู่ที่ความสบายใจว่ากำลังเดินถูกทาง</h3>
++            <p>ลูกค้าหลายรายไม่ได้ขาดเงิน แต่ขาดความชัดเจนใน trade-off ระหว่างทำเล ความเสี่ยง เวลา และ optionality จึงต้องการ advisor ที่ช่วย “ทำให้คิดง่ายขึ้น”</p>
++            <ul>
++              <li>อยากเห็นเหตุผล ข้อแลกเปลี่ยน และสิ่งที่ยังไม่รู้</li>
++              <li>อยากให้คนช่วยคัดกรองก่อนเข้าประชุมครอบครัว</li>
++              <li>อยากลด decision fatigue ในดีลที่ความผิดพลาดมีต้นทุนสูง</li>
++            </ul>
++          </article>
++        </div>
++      </div>
++    </section>
++
+     <section class="value-case section-dark">
+       <div class="page-shell">
+         <div class="section-intro section-intro--light reveal">
+@@ -179,6 +225,119 @@
+       </div>
+     </section>
+ 
++    <section class="advantage-section" id="advantage" aria-labelledby="advantage-title">
++      <div class="page-shell">
++        <div class="section-intro section-intro--split reveal">
++          <div>
++            <span class="section-kicker">WHY KPB × LANDOMETER CAN WIN</span>
++            <h2 id="advantage-title">unfair advantages ที่สมจริง ไม่ได้มาจาก AI อย่างเดียว</h2>
++          </div>
++          <p>คุณค่าของบริการนี้เกิดจากการประกบกันของ 2 สิ่งที่หาได้ยากในที่เดียว: ความไว้วางใจและบริบทลูกค้าของ KBank Private Banking กับฐานทรัพย์ ความเข้าใจ land/location และระบบคัดกรองเชิงโอกาสของ Landometer</p>
++        </div>
++
++        <div class="advantage-grid">
++          <article class="advantage-card reveal">
++            <span class="advantage-card__number">01</span>
++            <h3>Trusted context ก่อน search</h3>
++            <p>KPB รู้จักลูกค้าและบริบทของครอบครัวอยู่ก่อนแล้ว จึงเริ่มจากความเข้าใจ ไม่ใช่เริ่มจากฟอร์มทั่วไปหรือ search box แบบ mass market</p>
++          </article>
++          <article class="advantage-card reveal">
++            <span class="advantage-card__number">02</span>
++            <h3>Private supply ที่ตลาดทั่วไปไม่เห็น</h3>
++            <p>Landometer มี Land Portfolio และ operating knowledge ที่ต่อเนื่องมาหลายปี ทำให้เริ่มต้นจากฐานทรัพย์และความสัมพันธ์ ไม่ใช่สแครปรายชื่อจากประกาศสาธารณะ</p>
++          </article>
++          <article class="advantage-card reveal">
++            <span class="advantage-card__number">03</span>
++            <h3>Explainable matching จาก land + location logic</h3>
++            <p>ไม่เพียงบอกว่า “ทรัพย์นี้น่าสนใจ” แต่บอกได้ว่าทำไมจึงเข้ากับโจทย์ของครอบครัวนี้ จุดแข็งอยู่ตรงไหน และ trade-off อะไรที่ควรรู้ก่อนเดินหน้าต่อ</p>
++          </article>
++          <article class="advantage-card reveal">
++            <span class="advantage-card__number">04</span>
++            <h3>Privacy, permission, human review</h3>
++            <p>บริการนี้ไม่ลดความเป็น private banking ลงไปเป็น marketplace เพราะทุก shortlist ยังถูก human review และทุกการเปิดเผยข้อมูลยังอยู่ภายใต้ permission ladder</p>
++          </article>
++        </div>
++
++        <div class="joint-edge reveal">
++          <div class="joint-edge__column">
++            <span class="joint-edge__label">KBank Private Banking brings</span>
++            <ul>
++              <li>ความไว้วางใจระดับ relationship manager</li>
++              <li>บริบทเป้าหมายของครอบครัวและความเสี่ยงที่ยอมรับได้</li>
++              <li>ความสามารถในการสื่อสารเรื่องยากให้ตัดสินใจได้สบายขึ้น</li>
++            </ul>
++          </div>
++          <div class="joint-edge__center">×</div>
++          <div class="joint-edge__column">
++            <span class="joint-edge__label">Landometer brings</span>
++            <ul>
++              <li>portfolio supply และ readiness logic</li>
++              <li>land/location intelligence และ opportunity ranking</li>
++              <li>operating model สำหรับ permission-safe matching</li>
++            </ul>
++          </div>
++          <div class="joint-edge__result">
++            <span class="joint-edge__label">Together</span>
++            <strong>จากความสัมพันธ์ → สู่โอกาสที่คัดมาอย่างมีเหตุผล เป็นส่วนตัว และพร้อมต่อยอดเป็นดีลจริง</strong>
++          </div>
++        </div>
++      </div>
++    </section>
++
++    <section class="case-section section-dark" id="cases" aria-labelledby="case-title">
++      <div class="page-shell">
++        <div class="section-intro section-intro--light reveal">
++          <span class="section-kicker">TANGIBLE MOCKUP CASES</span>
++          <h2 id="case-title">ตัวอย่าง use cases ที่จับต้องได้ และทำให้ผู้บริหารเห็นภาพว่าบริการนี้มีไว้แก้ pain อะไร</h2>
++          <p>ด้านล่างไม่ใช่แค่ persona สวย ๆ แต่เป็นสถานการณ์ที่ Private Banker สามารถจินตนาการถึง client conversation ได้จริง และเห็นชัดว่า KPB จะดูมีคุณค่ามากขึ้นอย่างไรเมื่อมี Landometer อยู่เบื้องหลัง</p>
++        </div>
++
++        <div class="case-grid">
++          <article class="case-card reveal">
++            <div class="case-card__top">
++              <span>CASE A</span>
++              <strong>ลงทุนแบบมั่นใจ โดยไม่ต้องไล่ดูดีลเองทั้งตลาด</strong>
++            </div>
++            <h3>คุณพ่อเจ้าของธุรกิจรุ่นสอง ต้องการซื้อที่ดินเพื่อเป็น long-term capital allocation</h3>
++            <p class="case-card__pain"><strong>Emotional pain:</strong> รู้ว่าควรเริ่มจัดสรรเงินก้อนใหม่ แต่ไม่อยากถูกลากไปดูดีลจำนวนมากจากหลาย broker และไม่อยากเสียเวลาให้สิ่งที่ยังไม่พร้อมจริง</p>
++            <ul>
++              <li><strong>KPB role:</strong> ช่วยตีโจทย์ว่าเน้น yield, optionality หรือ legacy</li>
++              <li><strong>Landometer role:</strong> คัด private supply ที่ผ่าน permission และแสดง why / trade-off ชัดเจน</li>
++              <li><strong>What client feels:</strong> “มีคนช่วยคิดแทนในขั้นที่น่าเหนื่อยที่สุดแล้ว”</li>
++            </ul>
++          </article>
++
++          <article class="case-card reveal">
++            <div class="case-card__top">
++              <span>CASE B</span>
++              <strong>ขยายธุรกิจ โดยไม่ให้ความตั้งใจหลุดออกสู่ตลาดเร็วเกินไป</strong>
++            </div>
++            <h3>ครอบครัวผู้ประกอบการต้องการเช่าที่ดินสำหรับ flagship wellness / education / specialty retail concept</h3>
++            <p class="case-card__pain"><strong>Emotional pain:</strong> หากปล่อยข่าวว่ากำลังหาทำเล อาจทำให้คู่แข่งหรือ partner เดาเกมได้ และถ้าใช้ช่องทางทั่วไปจะได้ตัวเลือกที่เยอะเกินแต่ไม่คมพอ</p>
++            <ul>
++              <li><strong>KPB role:</strong> รับ brief เชิงกลยุทธ์และคุมระดับการเปิดเผยตัวตนของ client</li>
++              <li><strong>Landometer role:</strong> ใช้ location logic และ property fit คัด Top 10 ที่เหมาะกับ concept จริง</li>
++              <li><strong>What client feels:</strong> “ฉันได้โอกาสโดยไม่ต้องเปิดไพ่ทั้งสำรับ”</li>
++            </ul>
++          </article>
++
++          <article class="case-card reveal">
++            <div class="case-card__top">
++              <span>CASE C</span>
++              <strong>จัดระเบียบการตัดสินใจในครอบครัว ก่อนจะคุยเรื่องดีลต่อ</strong>
++            </div>
++            <h3>สมาชิกครอบครัวหลายคนมีมุมมองต่างกันเรื่องซื้อหรือเช่า และต้องการ shortlist ที่คุยกันต่อได้จริง</h3>
++            <p class="case-card__pain"><strong>Emotional pain:</strong> ปัญหาไม่ได้อยู่ที่หาทรัพย์ไม่เจอ แต่อยู่ที่ทุกคนเห็นข้อมูลคนละแบบ จึงประชุมกันไม่จบและเลื่อนการตัดสินใจออกไปเรื่อย ๆ</p>
++            <ul>
++              <li><strong>KPB role:</strong> เป็น trusted facilitator ในการวางกรอบการตัดสินใจ</li>
++              <li><strong>Landometer role:</strong> สร้าง shortlist ที่อธิบายได้ มีข้อมูลสม่ำเสมอ และเทียบกันได้ง่าย</li>
++              <li><strong>What client feels:</strong> “สุดท้ายเรามีภาษากลางในการคุยเรื่องนี้”</li>
++            </ul>
++          </article>
++        </div>
++      </div>
++    </section>
++
+     <section class="service-loop" aria-labelledby="loop-title">
+       <div class="page-shell">
+         <div class="section-intro reveal">
+@@ -235,7 +394,7 @@
+             <div class="product-sidebar__case">
+               <span>ACTIVE CASE</span>
+               <strong>KPB-26-0147</strong>
+-              <small>Premium wellness business</small>
++              <small>Discreet family capital + flagship site decision</small>
+             </div>
+             <nav class="stage-nav" aria-label="Product demo stages">
+               <button class="stage-nav__item is-active" type="button" data-stage-target="welcome">
+@@ -297,8 +456,8 @@
+                       <span class="scenario-card__label">DEMO SCENARIO</span>
+                       <div class="scenario-card__image"><img src="assets/property-resort.jpg" alt="Premium wellness destination"></div>
+                       <div class="scenario-card__body">
+-                        <h4>Premium Wellness Destination</h4>
+-                        <p>เช่าที่ดินกรุงเทพฯ ฝั่งตะวันออก เพื่อเปิดธุรกิจ wellness ระดับ premium ภายใน 12 เดือน</p>
++                        <h4>Flagship Wellness Destination</h4>
++                        <p>ครอบครัวต้องการเช่าที่ดินกรุงเทพฯ ฝั่งตะวันออก เพื่อเปิด flagship wellness destination โดยยังคงความเป็นส่วนตัวระหว่างสำรวจทางเลือก</p>
+                         <div class="scenario-card__tags"><span>Lease</span><span>East Bangkok</span><span>5–12 rai</span></div>
+                       </div>
+                     </div>
+@@ -751,7 +910,7 @@
+         <img src="assets/landometer-lockup.png" alt="Landometer">
+       </div>
+       <div class="site-footer__note">
+-        <strong>Interactive stakeholder concept · v0.1</strong>
++        <strong>Interactive stakeholder concept · v0.2</strong>
+         <p>Illustrative data only. This prototype is not an offer, investment advice, live property availability, or production security implementation.</p>
+       </div>
+       <a href="#top">BACK TO TOP ↑</a>
