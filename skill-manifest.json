@@ -1,0 +1,48 @@
+{
+  "bundle": "kpb-design-system-and-reusable-skills",
+  "version": "1.0.0",
+  "prepared": "2026-07-28",
+  "designSystem": {
+    "path": "docs/kpb_private_banking_experience_design_system_v1_0.md",
+    "scope": "KPB Private Property Opportunities project-derived experience overlay"
+  },
+  "skills": [
+    {
+      "id": "client-brand-product-adaptation",
+      "version": "1.0.0",
+      "layer": "shared-landometer",
+      "path": "skills/client-brand-product-adaptation/SKILL.md"
+    },
+    {
+      "id": "high-trust-service-value-case",
+      "version": "1.0.0",
+      "layer": "shared-landometer",
+      "path": "skills/high-trust-service-value-case/SKILL.md"
+    },
+    {
+      "id": "executive-interactive-demo",
+      "version": "1.0.0",
+      "layer": "shared-landometer",
+      "path": "skills/executive-interactive-demo/SKILL.md"
+    },
+    {
+      "id": "github-pages-release-operator",
+      "version": "1.0.0",
+      "layer": "shared-landometer",
+      "path": "skills/github-pages-release-operator/SKILL.md"
+    },
+    {
+      "id": "kpb-private-property-domain",
+      "version": "1.0.0",
+      "layer": "product-specific",
+      "path": "skills/kpb-private-property-domain/SKILL.md"
+    }
+  ],
+  "recommendedPipeline": [
+    "kpb-private-property-domain",
+    "high-trust-service-value-case",
+    "client-brand-product-adaptation",
+    "executive-interactive-demo",
+    "github-pages-release-operator"
+  ]
+}
