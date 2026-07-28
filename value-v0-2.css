@@ -1,0 +1,186 @@
+/* KPB Private Property Opportunities — stakeholder value extension v0.2 */
+.pain-section,
+.advantage-section,
+.case-section {
+  padding: 96px 0;
+}
+
+.pain-grid,
+.advantage-grid,
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.advantage-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pain-card,
+.advantage-card,
+.case-card {
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(4, 20, 32, 0.08);
+}
+
+.pain-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(247,242,234,0.9));
+  border: 1px solid rgba(10, 51, 81, 0.08);
+}
+
+.pain-card__tag,
+.joint-edge__label,
+.case-card__top span,
+.advantage-card__number {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #876a34;
+}
+
+.pain-card h3,
+.advantage-card h3,
+.case-card h3,
+.joint-edge__result strong {
+  margin: 12px 0;
+  line-height: 1.25;
+}
+
+.pain-card p,
+.advantage-card p,
+.case-card p,
+.joint-edge li {
+  color: rgba(8, 23, 35, 0.84);
+}
+
+.pain-card ul,
+.case-card ul,
+.joint-edge ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.advantage-section {
+  background: #fff;
+}
+
+.advantage-card {
+  background: linear-gradient(180deg, #ffffff, #fbf8f2);
+  border: 1px solid rgba(10, 51, 81, 0.08);
+}
+
+.advantage-card__number {
+  color: #0A3351;
+  font-weight: 700;
+}
+
+.joint-edge {
+  margin-top: 32px;
+  border-radius: 28px;
+  padding: 28px;
+  background: linear-gradient(135deg, #0A3351 0%, #123f62 52%, #f8f3e9 52.3%, #f8f3e9 100%);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.joint-edge__column,
+.joint-edge__result {
+  background: rgba(255,255,255,0.94);
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.joint-edge__center {
+  align-self: center;
+  font-size: 2rem;
+  color: #f4e7c7;
+  font-weight: 700;
+}
+
+.case-section {
+  background: linear-gradient(180deg, #0a3351 0%, #0d2d45 100%);
+}
+
+.case-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.96);
+}
+
+.case-card .case-card__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.case-card .case-card__top strong {
+  color: #f4e7c7;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.case-card p,
+.case-card li {
+  color: rgba(255,255,255,0.84);
+}
+
+.case-card__pain {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.08);
+}
+
+@media (max-width: 1100px) {
+  .advantage-grid,
+  .pain-grid,
+  .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .joint-edge {
+    grid-template-columns: 1fr;
+    background: linear-gradient(180deg, #0A3351 0%, #123f62 40%, #f8f3e9 40.2%, #f8f3e9 100%);
+  }
+
+  .joint-edge__center {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .pain-section,
+  .advantage-section,
+  .case-section {
+    padding: 72px 0;
+  }
+
+  .advantage-grid,
+  .pain-grid,
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pain-card,
+  .advantage-card,
+  .case-card,
+  .joint-edge__column,
+  .joint-edge__result {
+    padding: 22px;
+  }
+}
